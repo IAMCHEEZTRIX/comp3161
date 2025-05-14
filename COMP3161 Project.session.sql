@@ -23,7 +23,7 @@ CREATE TABLE student (
 CREATE TABLE lecturer (
     lectureID INT PRIMARY KEY NOT NULL,
     userName VARCHAR(255),
-    led_fname VARCHAR(255) NOT NULL,
+    lec_fname VARCHAR(255) NOT NULL,
     lec_lname VARCHAR(255) NOT NULL,
     
     CONSTRAINT FK_LectureUser 
