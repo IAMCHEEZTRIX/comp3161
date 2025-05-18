@@ -1,0 +1,905 @@
+{
+	"info": {
+		"_postman_id": "f31a375e-0829-4035-a226-20b90495ebde",
+		"name": "COMP3161 Project Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43131687"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\": 21000100,\r\n    \"userName\": \"Nyianda_Henry\",\r\n    \"fname\": \"Nyianda\",\r\n    \"lname\": \"Smith\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/register/user/lecturer",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"register",
+						"user",
+						"lecturer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Student Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"Nyianda_Smith\",\r\n    \"ownerID\": 11000100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/create/account/student",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"create",
+						"account",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Lecturer Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"Nyianda_Henry\",\r\n    \"ownerID\": 21000100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/create/account/lecturer",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"create",
+						"account",
+						"lecturer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"Rashene_Dillon\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/logout",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseID\": \"COMP5656\",\r\n    \"courseName\": \"Software Testing 2\",\r\n    \"assigned_lec\": 100010060,\r\n    \"adminID\": 621203055\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/create/course",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"create",
+						"course"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/courses",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Courses By Lecturer ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/courses/lecturer/100010007",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"courses",
+						"lecturer",
+						"100010007"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Courses By Student ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/courses/student/620153030",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"courses",
+						"student",
+						"620153030"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register for a Course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentID\": 621203045,\r\n    \"courseID\": \"CHEM3316\",\r\n    \"academic_year\": 2025,\r\n    \"academic_term\": \"SEMESTER 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/register/course",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"register",
+						"course"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Members for a Course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/members/CHEM3316",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"members",
+						"CHEM3316"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Calendar Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"event_name\": \"Mid-Term Exam 2\",\r\n    \"event_date\": \"2025-08-27\",\r\n    \"event_desc\": \"Simple Mid term test\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/create/calendar/CHEM3316",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"create",
+						"calendar",
+						"CHEM3316"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Calendar Event for a Course by Course ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/calendar/CHEM3316",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"calendar",
+						"CHEM3316"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Calendar for a Student for a given date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/calendar/620153030/2025-08-27",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"calendar",
+						"620153030",
+						"2025-08-27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Forum",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"topic\": \"Try it out guys\",\r\n    \"forum_desc\": \"Just testing\",\r\n    \"startdate\": \"2025-05-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/create/forum/CHEM3316",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"create",
+						"forum",
+						"CHEM3316"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Forums for a Course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/forum/CHEM3316",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"forum",
+						"CHEM3316"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Thread for a Forum",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"drop your first post\",\r\n    \"post\": \"First post\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/create/thread/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"create",
+						"thread",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Threads for a Forum",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Best Practices for Structuring Flask Projects?\",\r\n    \"post\": \"Hi everyone, I’m currently building a web application using Flask for my course project, and I’m starting to get a bit overwhelmed with how to organize my files and folders as the app grows. Right now I just have everything in one folder (HTML templates, routes, and Python logic), but I’ve heard it's better to use a more structured approach like MVC (Model-View-Controller). Can anyone share tips or examples of how you’ve structured your Flask projects? Specifically: Where do you keep your routes vs. logic? How do you manage templates and static files? Any folder structure recommendations? Any resources or project examples would be super helpful too. Thanks in advance! — Rashene D.\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/thread/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"thread",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a Reply to a thread",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"body\": \"I love it here!.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/create/reply/3",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"create",
+						"reply",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reply to a reply an  thread",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"body\": \"Nice to know!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/reply/3/3",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"reply",
+						"3",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Section",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Course Activities\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/create/section/COMP2230",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"create",
+						"section",
+						"COMP2230"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Content for a Course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"links\": \"https://www.w3schools.com/test/\",\r\n    \"files\": \"java_cheatsheet.pdf\",\r\n    \"slides\": \"java_basics.pptx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/create/content/2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"create",
+						"content",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All content for a Course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/content/COMP2230",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"content",
+						"COMP2230"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Assignment for Course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"assign_name\": \"Basic Assignment\",\r\n    \"due_date\": \"2025-08-30\",\r\n    \"a_desc\": \"First Assignment\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/create/assignment/COMP2230",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"create",
+						"assignment",
+						"COMP2230"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Assignment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"submission\": \"Check my website for the complete assignment 3\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/submit/assignment/2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"submit",
+						"assignment",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit grade",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"grade\": 97.43\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/grade/2/620153030",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"grade",
+						"2",
+						"620153030"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Course Report",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"Rashene_Dillon\",\r\n    \"password\": \"123456789\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/report/courses_over/50",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"report",
+						"courses_over",
+						"50"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student that Have over a given amount of course Report",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"grade\": 98.56\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/report/students_registered_for/5",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"report",
+						"students_registered_for",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lecturer that teaches over a given amount of courses",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"Rashene_Dillon\",\r\n    \"password\": \"123456789\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/report/lecturer_teaches_over_a_number_of_course/3",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"report",
+						"lecturer_teaches_over_a_number_of_course",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Courses that have the most registered student",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"Rashene_Dillon\",\r\n    \"password\": \"123456789\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/report/most_registered_courses_report/10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"report",
+						"most_registered_courses_report",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top Students",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"Rashene_Dillon\",\r\n    \"password\": \"123456789\"\r\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/report/top_students/10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"report",
+						"top_students",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

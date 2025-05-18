@@ -12,7 +12,7 @@
             "name": "COMP3161 Project",
             "database": "comp3161project",
             "username": "COMP3161",
-            "password": "P@ssw0rd",
+            "password": "password",
             "connectionTimeout": 5
         }
     ]
